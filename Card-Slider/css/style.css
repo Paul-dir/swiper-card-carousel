@@ -1,0 +1,172 @@
+ @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: "Montserrat", sans-serif;
+ }
+
+ body {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     min-height: 100vh;
+     background: url("../images/bg.jpg") #030728 no-repeat center;
+     background-size: cover;
+ }
+.slider-wrapper{
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 70px 55px;
+}
+ .card-item {
+     color: #fff;
+     user-select: none;
+     padding: 35px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     border-radius: 8px;
+     backdrop-filter: blur(30px);
+     background: rgba(255, 255, 255, 0.2);
+     border: 1px solid rgba(255, 255, 255, 0.5);
+ }
+
+ /* Fixing selector */
+ .card-list .user-image {
+     width: 150px;
+     height: 150px;
+     border-radius: 50%;
+     margin-bottom: 40px;
+     border: 3px solid #fff;
+     padding: 4px;
+ }
+
+ .card-list .user-profession {
+     font-size: 1.15rem;
+     color: #e3e3e3;
+     font-weight: 500;
+     margin: 14px 0 40px;
+ }
+
+ .card-list .message-button {
+     font-size: 1.25rem;
+     padding: 10px 35px;
+     color: #030728;
+     border-radius: 6px;
+     font-weight: 500;
+     cursor: pointer;
+     transition: 0.2s ease;
+     background: #fff;
+     border: 1px solid transparent;
+
+ }
+
+ .card-list .message-button:hover {
+     background: rgba(255, 255, 255, 0.1);
+     border: 1px solid #fff;
+     columns: #fff;
+ }
+ 
+ .swiper-pagination-bullet {
+     background: #fff !important;
+     /* White dots */
+     height: 15px;
+     width: 15px;
+ }
+
+ .swiper-pagination-bullet-active {
+     background: #fff !important;
+     /* Ensure active dots are also white */
+ }
+
+/* Swiper navigation button styling */
+.swiper-button-prev,
+.swiper-button-next {
+    color: #fff;
+    /* Default color */
+    margin-top: -50px;
+}
+
+/* Swiper navigation button hover styling */
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    color: #4658ff;
+    /* Change color on hover */
+}
+
+.swiper-slide .user-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 40px;
+    border: 3px solid #fff;
+    padding: 4px;
+    object-fit: cover;
+    /* Ensures the image covers the entire area, maintaining aspect ratio */
+    object-position: center;
+    /* Centers the image */
+}
+/* Media Queries */
+@media (max-width: 1200px) {
+    .slider-wrapper {
+        margin: 0 50px 50px;
+    }
+}
+
+@media (max-width: 992px) {
+    .card-item {
+        padding: 25px;
+    }
+
+    .card-list .user-image {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 30px;
+    }
+
+    .card-list .user-profession {
+        font-size: 1rem;
+        margin: 10px 0 30px;
+    }
+
+    .card-list .message-button {
+        font-size: 1rem;
+        padding: 8px 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .slider-wrapper {
+        margin: 0 20px 40px;
+    }
+
+    .card-item {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-list .user-image {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 20px;
+    }
+
+    .card-list .user-profession {
+        font-size: 0.9rem;
+        margin: 8px 0 20px;
+    }
+
+    .card-list .message-button {
+        font-size: 0.9rem;
+        padding: 6px 20px;
+    }
+}
